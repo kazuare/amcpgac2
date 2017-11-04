@@ -21,6 +21,6 @@ def isPalindrome():
 
     return render_template(
         'index.html',
-        title=request.args.get('string'),
+        title = request.args.get('str', default = '*', type = str),
         year=datetime.now().year,
     )
