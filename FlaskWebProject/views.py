@@ -24,7 +24,7 @@ def isPalindrome():
     return '1' if s == s[::-1] else '0'
 
 @app.route('/getRandomFact')
-def isPalindrome():
+def getRandomFact():
     facts = [
              'Palindromes date back at least to 79 AD, as a palindrome was found as a graffito at Herculaneum, a city buried by ash in that year.',
              'The palindromic Latin riddle <<In girum imus nocte et consumimur igni>> (<<we go wandering at night and are consumed by fire>>) describes the behavior of moths.',
