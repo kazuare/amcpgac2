@@ -12,15 +12,31 @@
     <p> Welcome to palindrome fansite!</p>
     <p> check if a word is a palindrome:</p>	
 	<textarea id="area"> </textarea>
-	<button id="button">check</button>
+	<button id="button1">check</button>
 	<script>
 	// when mouse button is released (note: window, not canvas here)
-	$("#button").on('mouseup', function(e){
+	$("#button1").on('mouseup', function(e){
 			$.ajax({
 	  		  type: "GET",
 	  		  url: 'http://azuretask.azurewebsites.net/isPalindrome?str=' + $('#area').val(),
 			  success: function( data ) {
 				  	alert(data=="1"? "yes, it is a palindrome!" : "no, it is not a palindrome!");  
+			  }
+	        });
+	});
+	</script>
+	
+	<p> get a random fascinating palindrome fact:</p>
+	<button id="button2">get fact</button>
+	
+	<script>
+	// when mouse button is released (note: window, not canvas here)
+	$("#button2").on('mouseup', function(e){
+			$.ajax({
+	  		  type: "GET",
+	  		  url: 'http://azuretask.azurewebsites.net/getRandomFact",
+			  success: function( data ) {
+				  	alert(data);  
 			  }
 	        });
 	});
