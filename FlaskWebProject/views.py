@@ -18,9 +18,8 @@ def home():
 	
 @app.route('/isPalindrome')
 def isPalindrome():
-
     return render_template(
         'index.html',
-        title = request.args.get('str', default = '*', type = str),
+        title='Home Page',
         year=datetime.now().year,
     )
