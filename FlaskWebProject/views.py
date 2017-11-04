@@ -19,4 +19,4 @@ def home():
 	
 @app.route('/isPalindrome')
 def isPalindrome():
-    return username = request.args.get('str', default = '*', type = str)
+    return request.args.get('str', default = '*', type = str)
