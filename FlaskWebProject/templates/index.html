@@ -10,17 +10,18 @@
 
 <body>
     <h1>{{ title }}</h1>
-    <p> Welcome to python on Azure</p>
-	<textarea> </textarea>
-	<button id="button">test</button>
+    <p> Welcome to palindrome fansite!</p>
+    <p> check if a word is a palindrome:</p>	
+	<textareaid="area"> </textarea>
+	<button id="button">check</button>
 	<script>
 	// when mouse button is released (note: window, not canvas here)
 	$("#button").on('mouseup', function(e){
 			$.ajax({
 	  		  type: "GET",
-	  		  url: 'http://azuretask.azurewebsites.net/isPalindrome?str=' + "test",
+	  		  url: 'http://azuretask.azurewebsites.net/isPalindrome?str=' + var text = $('#area').val();,
 			  success: function( data ) {
-				  	alert(data);  
+				  	alert(data=="1"? "yes, it is a palindrome!" : "no, it is not a palindrome!");  
 			  }
 	        });
 	});
