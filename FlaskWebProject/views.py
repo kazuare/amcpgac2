@@ -10,21 +10,24 @@ from FlaskWebProject import app
 
 @app.route('/')
 @app.route('/home')
-def home():
+def homeRequest():
     """Renders the home page."""
     return render_template(
         'index.html',
         title='palindrome',
         year=datetime.now().year,
     )
-	
+
+def isPalindrome(s):
+    return s == s[::-1]
+
 @app.route('/isPalindrome')
-def isPalindrome():
+def isPalindromeRequest():
     s = request.args.get('str', default = '*', type = str)
-    return '1' if s == s[::-1] else '0'
+    return '1' if isPalindrome(s) else '0'
 
 @app.route('/getRandomFact')
-def getRandomFact():
+def getRandomFactRequest():
     facts = [
              'Palindromes date back at least to 79 AD, as a palindrome was found as a graffito at Herculaneum, a city buried by ash in that year.',
              'The palindromic Latin riddle <<In girum imus nocte et consumimur igni>> (<<we go wandering at night and are consumed by fire>>) describes the behavior of moths.',
