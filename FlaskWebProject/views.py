@@ -19,8 +19,14 @@ def home():
 @app.route('/isPalindrome')
 def isPalindrome():
     """Renders the home page."""
+	k = 1
+	try:
+		k = request.args.get('string')
+	except:
+		k = "something exploded"
+		
     return render_template(
         'index.html',
-        title=request.args.get('string'),
+        title=k,
         year=datetime.now().year,
     )
