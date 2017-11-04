@@ -20,5 +20,4 @@ def home():
 @app.route('/isPalindrome')
 def isPalindrome():
     s = request.args.get('str', default = '*', type = str)
-    #return str(s == s[::-1])
-    return {'lol' : 'kek'}
+    return '1' if s == s[::-1] else '0'
