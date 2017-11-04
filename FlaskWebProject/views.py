@@ -15,3 +15,8 @@ def home():
         title='Home Page',
         year=datetime.now().year,
     )
+	
+@app.route('/isPalindrome')
+def isPalindrome():
+    """Renders the home page."""
+    return request.args.get('string')
