@@ -12,7 +12,18 @@
     <h1>{{ title }}</h1>
     <p> Welcome to python on Azure</p>
 	<textarea> </textarea>
-	<button>test</button>
-	
+	<button id="button">test</button>
+	<script>
+	// when mouse button is released (note: window, not canvas here)
+	$("#button").on('mouseup', function(e){
+			$.ajax({
+	  		  type: "GET",
+	  		  url: 'http://azuretask.azurewebsites.net/isPalindrome?str=' + "test",
+			  success: function( data ) {
+				  	alert(data);  
+			  }
+	        });
+	});
+	</script>
 </body>
 
