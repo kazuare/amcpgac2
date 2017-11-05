@@ -118,7 +118,7 @@ IF NOT EXIST "%DEPLOYMENT_TARGET%\env\azure.env.%PYTHON_RUNTIME%.txt" (
   echo Found compatible virtual environment.
 )
 
-:: 4. Install packages
+:: 4. Install packagesr
 echo Pip install requirements.
 env\scripts\pip install -r requirements.txt
 IF !ERRORLEVEL! NEQ 0 goto error
@@ -154,7 +154,7 @@ popd
 :: 7. Run tests
 IF EXIST "%DEPLOYMENT_SOURCE%\tests.py" (
   echo RUNNING TESTS
-  env\scripts\python tests.py
+  python tests.py
   IF !ERRORLEVEL! NEQ 0 goto error
 )
 
