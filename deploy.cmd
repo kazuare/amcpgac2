@@ -154,7 +154,7 @@ popd
 :: 7. Run tests
 IF EXIST "%DEPLOYMENT_SOURCE%\tests.py" (
   echo RUNNING TESTS
-  %PYTHON_EXE% tests.py
+  env\scripts\python tests.py
   IF !ERRORLEVEL! NEQ 0 goto error
 )
 
