@@ -1,4 +1,5 @@
-https://travis-ci.org/kazuare/amcpgac2.svg?branch=master
+
+[![Build Status](https://travis-ci.org/kazuare/amcpgac2.svg?branch=master)](https://travis-ci.org/kazuare/amcpgac2?branch=master)
 
 can be seen in action there: http://azuretask.azurewebsites.net/
 
