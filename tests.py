@@ -1,5 +1,5 @@
-import sys.path.append
-import os.path.abspath
+import sys
+import os
 
 sys.path.append(os.path.abspath("FlaskWebProject"))
 from views import isPalindrome
