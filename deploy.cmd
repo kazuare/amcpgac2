@@ -154,6 +154,7 @@ popd
 :: 7. Run tests
 IF EXIST "%DEPLOYMENT_SOURCE%\tests.py" (
   echo RUNNING TESTS
+  pip install -r requirements.txt
   python tests.py
   IF !ERRORLEVEL! NEQ 0 goto error
 )
