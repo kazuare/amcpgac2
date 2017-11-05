@@ -2,9 +2,13 @@ import sys
 import os
 
 sys.path.append(os.path.abspath("FlaskWebProject"))
-from views import isPalindrome
+import commonCode
 
-if test_isPalindrome("23"):
-    sys.exit(99)
+def test_palindrome():
+    assert commonCode.isPalindrome("aabaa")
 
-sys.exit(9)
+def test_not_a_palindrome():
+    assert not commonCode.isPalindrome("aaba")
+
+
+
